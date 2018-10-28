@@ -129,24 +129,32 @@ window.onload = function () {
         ctx.clearRect(block_x, block_y, block_size, block_size);
 
     }
-
+    
+    var block_x_1;
+    var block_y_1;
+    var block_x_2;
+    var block_y_2;
+    var block_x_3;
+    var block_y_3;
+    var block_x_4;
+    var block_y_4;    
     function drawBlocks(a, b, c, d) {
         ctx.fillStyle = 'rgb(0,0,225)';
-        var block_x = (a - Math.floor(a / 10) * 10) * block_size;
-        var block_y = Math.floor(a / 10) * block_size;
-        ctx.fillRect(block_x, block_y, block_size, block_size);
+        block_x_1 = (a - Math.floor(a / 10) * 10) * block_size;
+        block_y_1 = Math.floor(a / 10) * block_size;
+        ctx.fillRect(block_x_1, block_y_1, block_size, block_size);
 
-        block_x = (b - Math.floor(b / 10) * 10) * block_size;
-        block_y = Math.floor(b / 10) * block_size;
-        ctx.fillRect(block_x, block_y, block_size, block_size);
+        block_x_2 = (b - Math.floor(b / 10) * 10) * block_size;
+        block_y_2 = Math.floor(b / 10) * block_size;
+        ctx.fillRect(block_x_2, block_y_2, block_size, block_size);
 
-        block_x = (c - Math.floor(c / 10) * 10) * block_size;
-        block_y = Math.floor(c / 10) * block_size;
-        ctx.fillRect(block_x, block_y, block_size, block_size);
+        block_x_3 = (c - Math.floor(c / 10) * 10) * block_size;
+        block_y_3 = Math.floor(c / 10) * block_size;
+        ctx.fillRect(block_x_3, block_y_3, block_size, block_size);
 
-        block_x = (d - Math.floor(d / 10) * 10) * block_size;
-        block_y = Math.floor(d / 10) * block_size;
-        ctx.fillRect(block_x, block_y, block_size, block_size);
+        block_x_4 = (d - Math.floor(d / 10) * 10) * block_size;
+        block_y_4 = Math.floor(d / 10) * block_size;
+        ctx.fillRect(block_x_4, block_y_4, block_size, block_size);
     }
 
     function reset() {
@@ -231,56 +239,12 @@ window.onload = function () {
         for (var i = 0; i < 18; i++) {
             if ((board[0 + i * 10] == 1) && (board[1 + i * 10] == 1) && (board[2 + i * 10] == 1) && (board[3 + i * 10] == 1) && (board[4 + i * 10] == 1) && (board[5 + i * 10] == 1) && (board[6 + i * 10] == 1) && (board[7 + i * 10] == 1) && (board[8 + i * 10] == 1) && (board[9 + i * 10] == 1)) {
                 down_dec = 1;
-
-                board[0 + i * 10] = 0;
-                var block_x = ((0 + i * 10) - Math.floor((0 + i * 10) / 10) * 10) * block_size;
-                var block_y = Math.floor((0 + i * 10) / 10) * block_size;
-                ctx.clearRect(block_x, block_y, block_size, block_size);
-
-                board[1 + i * 10] = 0;
-                block_x = ((1 + i * 10) - Math.floor((1 + i * 10) / 10) * 10) * block_size;
-                block_y = Math.floor((1 + i * 10) / 10) * block_size;
-                ctx.clearRect(block_x, block_y, block_size, block_size);
-
-                board[2 + i * 10] = 0;
-                block_x = ((2 + i * 10) - Math.floor((2 + i * 10) / 10) * 10) * block_size;
-                block_y = Math.floor((2 + i * 10) / 10) * block_size;
-                ctx.clearRect(block_x, block_y, block_size, block_size);
-
-                board[3 + i * 10] = 0;
-                block_x = ((3 + i * 10) - Math.floor((3 + i * 10) / 10) * 10) * block_size;
-                block_y = Math.floor((3 + i * 10) / 10) * block_size;
-                ctx.clearRect(block_x, block_y, block_size, block_size);
-
-                board[4 + i * 10] = 0;
-                block_x = ((4 + i * 10) - Math.floor((4 + i * 10) / 10) * 10) * block_size;
-                block_y = Math.floor((4 + i * 10) / 10) * block_size;
-                ctx.clearRect(block_x, block_y, block_size, block_size);
-
-                board[5 + i * 10] = 0;
-                block_x = ((5 + i * 10) - Math.floor((5 + i * 10) / 10) * 10) * block_size;
-                block_y = Math.floor((5 + i * 10) / 10) * block_size;
-                ctx.clearRect(block_x, block_y, block_size, block_size);
-
-                board[6 + i * 10] = 0;
-                block_x = ((6 + i * 10) - Math.floor((6 + i * 10) / 10) * 10) * block_size;
-                block_y = Math.floor((6 + i * 10) / 10) * block_size;
-                ctx.clearRect(block_x, block_y, block_size, block_size);
-
-                board[7 + i * 10] = 0;
-                block_x = ((7 + i * 10) - Math.floor((7 + i * 10) / 10) * 10) * block_size;
-                block_y = Math.floor((7 + i * 10) / 10) * block_size;
-                ctx.clearRect(block_x, block_y, block_size, block_size);
-
-                board[8 + i * 10] = 0;
-                block_x = ((8 + i * 10) - Math.floor((8 + i * 10) / 10) * 10) * block_size;
-                block_y = Math.floor((8 + i * 10) / 10) * block_size;
-                ctx.clearRect(block_x, block_y, block_size, block_size);
-
-                board[9 + i * 10] = 0;
-                block_x = ((9 + i * 10) - Math.floor((9 + i * 10) / 10) * 10) * block_size;
-                block_y = Math.floor((9 + i * 10) / 10) * block_size;
-                ctx.clearRect(block_x, block_y, block_size, block_size);
+                for(j = 0; j<10; ++j){
+                    board[j + i * 10] = 0;
+                    var block_x = ((j + i * 10) - Math.floor((j + i * 10) / 10) * 10) * block_size;
+                    var block_y = Math.floor((j + i * 10) / 10) * block_size;
+                    ctx.clearRect(block_x, block_y, block_size, block_size);
+                }
                 for (var n = 0; n < i; n++) {
                     board[0 + (i + accumulation) * 10] = board[0 + (i + accumulation - 1) * 10];
                     if (board[0 + (i + accumulation) * 10] == 1) {
@@ -427,15 +391,18 @@ window.onload = function () {
                 break_persec = 5;
                 break;
             case "a":
-                //if((block_0 + x_offset + y_offset)%10 == 0 || (block_1 + x_offset + y_offset)%10 == 0 || (block_2 + x_offset + y_offset)%10 == 0 || (block_3 + x_offset + y_offset)%10 == 0)
-                x_offset -= x_direc
+                if(block_x_1 != 0 && block_x_2 != 0 && block_x_3 != 0 && block_x_4 != 0){
+                x_offset -= x_direc;
                 x_direc = -1;
-                x_offset += x_direc
+                x_offset += x_direc;
+                }
                 break;
             case "d":
-                x_offset -= x_direc
+                if(block_x_1 != 270 && block_x_2 != 270 && block_x_3 != 270 && block_x_4 != 270){                
+                x_offset -= x_direc;
                 x_direc = 1;
-                x_offset += x_direc
+                x_offset += x_direc;
+                }
                 break;
         }
     }
