@@ -125,7 +125,6 @@ window.onload = function()
         var dec = 0;
      //   for (asd = bottom; asd>=top; --asd){
         for (asd = 0; asd>=2; --asd){
-            
             for (row_detected = bottom; row_detected>=top; --row_detected){
                 for(column = 1; column<BOARD_COLUMN - 1; ++column){
                     if(board[row_detected + row_offset][column] != 1)
